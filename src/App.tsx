@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import "./index.scss"
+import "./styles/index.scss"
 import {Route, Routes, Link} from "react-router-dom";
 import {AboutAsync} from "./pages/About/About.async";
 import {MainAsync} from "./pages/Main/Main.async";

@@ -1,9 +1,12 @@
 @import "reset";
 @import "variables/global";
-@import "themes/dark";
 @import "themes/normal";
+@import "themes/dark";
 
 .app {
+  background: var(--bg-color);
+  min-height: 100vh;
   font-size: $font-size-m;
   font-family: $font-family;
+  color: var(--primary-color);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from "./Main.module.scss"
+import styles from "../styles/Main.module.scss"
 
-export const Main = () => {
+const Main = () => {
     return (
         <div className={styles.div}>
             Main

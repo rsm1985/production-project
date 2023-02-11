@@ -3,7 +3,6 @@ import webpack from "webpack";
 import {buildLoaders} from "./buildLoaders";
 import {buildPlugins} from "./buildPlugin";
 import {buildDevServer} from "./buildDevServer";
-import path from "path";
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
     const {paths, mode, isDev} = options;

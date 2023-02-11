@@ -1,0 +1,19 @@
+@import "src/app/styles/variables/global";
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: $navbar-height;
+  background-color: var(--inverted-bg-color);
+}
+
+.link {
+  padding: 5px;
+}
+
+.logo {
+
+}

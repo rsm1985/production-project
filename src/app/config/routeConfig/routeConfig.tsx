@@ -1,6 +1,5 @@
-import {RouterProps} from "react-router-dom";
 import {MainPage} from "pages/Main";
-import {PathRouteProps, RouteProps} from "react-router";
+import { RouteProps} from "react-router";
 import {AboutPage} from "pages/About";
 
 const RoutePath = {

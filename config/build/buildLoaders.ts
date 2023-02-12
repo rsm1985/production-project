@@ -5,6 +5,18 @@ import {BuildOptions} from "./types/config";
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     return ([
         {
+            test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                },
+            ],
+        },
+        {
+            test: /\.svg$/,
+            use: ["@svgr/webpack"],
+        },
+        {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/,
@@ -26,18 +38,6 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                 },
                 "sass-loader",
             ],
-        },
-        {
-            test: /\.svg$/,
-            use: ["@svgr/webpack"],
-        },
-        {
-            test: /\.(png|jpe?g|gif|woff|woff2)$/i,
-            use: [
-                {
-                    loader: 'file-loader',
-                },
-            ],
-        },
+        }
     ])
 }

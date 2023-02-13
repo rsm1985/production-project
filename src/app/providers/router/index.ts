@@ -1,1 +1,1 @@
-export {default as Router} from "./ui/AppRouter"
+export {default as Router} from './ui/AppRouter';

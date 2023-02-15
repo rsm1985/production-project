@@ -7,24 +7,21 @@ import {Sidebar} from 'widgets/Sidebar';
 import './styles/index.scss';
 
 export const App = () => {
-	const {
-		theme,
-		toggleTheme
-	} = useTheme();
+	const { theme, toggleTheme 	} = useTheme();
 
 	return (
-
-  <div className={classNames('app',
+  		<div className={classNames('app',
 			{}, [theme])
 		}>
-  <Suspense fallback={<div>...</div>}>
-  <Navbar/>
-  <div className="content-page">
-  <Sidebar/>
-  <Router/>
-				</div>
-			</Suspense>
+			<Suspense fallback={<div>...</div>}>
+    
+      <Navbar/>
+				<div className="content-page">
+					<Sidebar/>
+					<Router/>
+  </div>
+    </Suspense>
 
-		</div>
+  </div>
 	);
 };

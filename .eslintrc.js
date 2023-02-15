@@ -6,7 +6,8 @@ module.exports = {
 	'extends': [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended'
+		'plugin:@typescript-eslint/recommended',
+		'plugin:i18next/recommended'
 	],
 	'overrides': [
 	],
@@ -20,7 +21,8 @@ module.exports = {
 	},
 	'plugins': [
 		'react',
-		'@typescript-eslint'
+		'@typescript-eslint',
+		'i18next'
 	],
 	'rules': {
 		'react/jsx-indent': [2, 2],
@@ -52,7 +54,9 @@ module.exports = {
 			'error',
 			'always'
 		],
-		'react/jsx-props-no-spreading': 'warn'
+		'react/jsx-props-no-spreading': 'warn',
+		//Правило для вывода ошибки при отсутствии перевода через метод t() только внутри разметки
+		'i18next/no-literal-string': ['error', {markupOnly: true}]
 	},
 	globals: {
 		IS_DEV: true

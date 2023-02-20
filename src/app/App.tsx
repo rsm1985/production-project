@@ -5,6 +5,7 @@ import {Router} from 'app/providers/router';
 import {Navbar} from 'widgets/Navbar';
 import {Sidebar} from 'widgets/Sidebar';
 import './styles/index.scss';
+import {PageLoader} from 'widgets/PageLoader';
 
 export const App = () => {
 	const { theme, toggleTheme 	} = useTheme();
@@ -13,7 +14,7 @@ export const App = () => {
   		<div className={classNames('app',
 			{}, [theme])
 		}>
-			<Suspense fallback={<div>...</div>}>
+			<Suspense fallback={<PageLoader />}>
     
       <Navbar/>
 				<div className="content-page">

@@ -2,5 +2,7 @@
   "pages": {
     "main": "Main page",
     "notFound": "Page not found"
-  }
+  },
+  "pageError": "Error",
+  "reloadPage": "Reload page"
 }

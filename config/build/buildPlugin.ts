@@ -2,8 +2,10 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {BuildOptions} from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 
-export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({paths, isDev, withReport}: BuildOptions): webpack.WebpackPluginInstance[] {
+
 	return ([
 		new webpack.ProgressPlugin(),
 		new HtmlWebpackPlugin({
@@ -16,7 +18,11 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
 		new webpack.DefinePlugin({
 			IS_DEV: isDev
 		}),
-		new webpack.HotModuleReplacementPlugin()
-
+		new webpack.HotModuleReplacementPlugin(),
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'static',
+			openAnalyzer: withReport,
+			reportFilename: 'bundle_sizes.html'
+		})
 	]);
 }

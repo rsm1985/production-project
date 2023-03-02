@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 const Main = () => {
 	const {t} = useTranslation();
-	throw new Error();
+	// throw new Error();
 	return (
   <div className={styles.div}>
   {t('pages.main')}

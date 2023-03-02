@@ -9,11 +9,11 @@ const paths: BuildPaths = {
 	src: path.resolve(__dirname, 'src')
 };
 
-
 export default (env: BuildEnv) => {
 
 	const mode = env.mode || 'development';
 	const PORT = env.port || 3000;
+	const withReport = env.withReport || false;
 
 	const isDev = mode === 'development';
 
@@ -21,6 +21,7 @@ export default (env: BuildEnv) => {
 		mode,
 		paths,
 		isDev,
-		port: PORT
+		port: PORT,
+		withReport
 	});
 };

@@ -1,4 +1,6 @@
-import {classNames} from './classNames';
+import {classNames} from 'shared/lib/classNames/classNames';
+import {render, screen} from '@testing-library/react';
+import {Button} from 'shared/ui';
 
 describe('classNames', () => {
 	test('with first param', () => {
@@ -14,5 +16,12 @@ describe('classNames', () => {
 	test('with all params and on mod is false', () => {
 		expect(classNames('class', {mod1: true, mod2: false}, ['additional-1', 'additional-2'] ))
 			.toBe('class mod1 additional-1 additional-2');
+	});
+});
+
+describe('render', () => {
+	test('button', () => {
+		render(<Button>Test</Button>);
+		expect(screen.getByText('Test')).toBeInTheDocument();
 	});
 });

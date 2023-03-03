@@ -1,6 +1,6 @@
 import React from 'react';
 import {classNames} from 'shared/lib/classNames/classNames';
-import {langs} from 'shared/config/i18n/langs';
+import {langs} from 'shared/lib/i18n/langs';
 import {useTranslation} from 'react-i18next';
 
 import styles from './LangSwitcher.module.scss';

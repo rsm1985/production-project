@@ -19,9 +19,3 @@ describe('classNames', () => {
 	});
 });
 
-describe('render', () => {
-	test('button', () => {
-		render(<Button>Test</Button>);
-		expect(screen.getByText('Test')).toBeInTheDocument();
-	});
-});

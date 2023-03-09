@@ -55,17 +55,17 @@ module.exports = {
 		],
 		'react/jsx-props-no-spreading': 'warn',
 		//Правило для вывода ошибки при отсутствии перевода через метод t() только внутри разметки
-		'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid']}],
+		'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid', 'to']}],
 		'max-len': ['error', {ignoreComments: true}]
 	},
 	globals: {
-		IS_DEV: true
+		IS_DEV: true,
 	},
-	overrides: [
+	overrides: [ 
 		{
 			files: ['**/src/**/*.test.{ts,tsx}'],
 			rules: {
-				"i18next/no-literal-string": "off"
+				'i18next/no-literal-string': 'off'
 			}
 		}
 	]

@@ -7,6 +7,6 @@ jobs:
     steps:
 
       - name: install
-      - run: npm install
+        run: npm install
       - name: build
-      - run: npm run build
+        run: npm run build
